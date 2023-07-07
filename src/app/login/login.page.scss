@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+.title {
+    text-align: center;
+    font-size: 8vh;
+    font-family: "Poppins";
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.loginForm{
+    margin-top:15%;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-button{
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+//code for phones
+@media (max-width: 576px), (max-width:800px) {
+
+}

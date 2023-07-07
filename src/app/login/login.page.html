@@ -1,0 +1,16 @@
+
+<ion-content [fullscreen]="true">
+
+<ion-list class = "loginForm">
+  <ion-label class = "title">IoT Firewall</ion-label>
+  <ion-item>
+    <ion-icon name="person-outline"></ion-icon>
+    <ion-input label="Username" labelPlacement="floating"  type="text" placeholder="Enter your username" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="lock-closed"></ion-icon>
+    <ion-input label="Password" labelPlacement="floating"  type="text" placeholder="Enter your password" type ="password"></ion-input>
+  </ion-item>
+  <ion-button (click)="login()" expand="block" shape="round" size="medium" color="primary" class="login-button">Login</ion-button>
+</ion-list>  
+</ion-content>
