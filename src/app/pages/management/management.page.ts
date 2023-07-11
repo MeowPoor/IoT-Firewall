@@ -12,4 +12,27 @@ export class ManagementPage implements OnInit {
   ngOnInit() {
   }
 
+  handlerMessage = '';
+  roleMessage = '';
+
+  public alertButtons = [
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      handler: () => {
+        //cancel on alert
+      },
+    },
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        //yes on alert
+      },
+    },
+  ];
+
+  setResult(ev:any) {
+    
+  }
 }

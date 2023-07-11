@@ -8,9 +8,126 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Management</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class ="home">
+  <h3>Account Management</h3>
+  <ion-row>
+    <ion-col>
+        <ion-label>Username</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-input type="text" placeholder="Enter your username"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-label>Old Password</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+      <ion-input type="password" placeholder="Enter your old password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-label>New Password</ion-label> 
+    </ion-col>
+    <ion-col>
+      <ion-item>
+      <ion-input type="password" placeholder="Enter your new password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+        <ion-label>*(8 - 32 Characters)</ion-label>
+    </ion-col>
+  </ion-row>
+  <h3>2.4G SSID1</h3>
+  
+  <ion-row>
+    <ion-col>
+        <ion-label>SSID Name</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col><ion-label>*(1-32 Characters)</ion-label></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-label>Password</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+      <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col><ion-label>*(You can input 8-64 Characters)</ion-label></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-label>Confirm New Password</ion-label> 
+    </ion-col>
+    <ion-col>
+      <ion-item>
+      <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+        <ion-label></ion-label>
+    </ion-col>
+  </ion-row>
+
+  <h3>5G SSID1</h3>
+  <ion-row>
+    <ion-col>
+        <ion-label>SSID Name</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col><ion-label>*(1-32 Characters)</ion-label></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-label>Password</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+      <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col><ion-label>*(You can input 8-64 Characters)</ion-label></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <ion-label>Confirm New Password</ion-label> 
+    </ion-col>
+    <ion-col>
+      <ion-item>
+      <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+        <ion-label></ion-label>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <ion-button id ="present-alert">Apply</ion-button>
+  <ion-alert
+    trigger="present-alert"
+    header="Save Changes"
+    message="Are you sure you want to save the changes?"
+    [buttons]="alertButtons"
+    (didDismiss)="setResult($event)"
+  ></ion-alert>
+  <p>{{ handlerMessage }}</p>
+  <p>{{ roleMessage }}</p>
 </ion-content>

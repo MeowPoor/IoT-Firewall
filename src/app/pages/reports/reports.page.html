@@ -1,6 +1,8 @@
+<script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/radial/gauge.min.js"></script>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Reports</ion-title>
+    <ion-title>Status</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -8,9 +10,88 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Reports</ion-title>
+      <ion-title size="large">Status</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+
+  <ion-row class="try">
+    <ion-col class ="tablecol">
+      <h1 style="font-size: 18px; color: #21757F; font-weight: bold;">CONTACT PERSON</h1>
+      <ion-item class="table-item">
+        <ion-grid class="table">
+          <ion-row class="table-row">
+            <ion-col class="columns">Type of Threats</ion-col>
+            <ion-col class="columns">Vulnerabilities</ion-col>
+            <ion-col class="columns">Suspicious Activities</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-col>
+  </ion-row> 
+
+
+
+  <ion-row class="try">
+    <ion-col class ="tablecol">
+      <ion-item class="table-item" color="light">
+        <ion-grid class="table">
+          <ion-row class="table-row">
+            <ion-col class="columns">Trojan</ion-col>
+            <ion-col class="columns">Exploit malware</ion-col>
+            <ion-col class="columns">Will target users through a method like a phishing attack</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-col>
+  </ion-row> 
+
+  <ion-item class="table-item" color="light">
+        <ion-grid class="table">
+          <ion-row class="table-row">
+            <ion-col class="columns">Malware</ion-col>
+            <ion-col class="columns"> Unsecured entry</ion-col>
+            <ion-col class="columns">Wandering around campus areas attempting to open multiple doors.</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item> -->
+
+      <canvas data-type="radial-gauge"
+      data-min-value="0"
+      data-max-value="360"
+      data-major-ticks="N,NE,E,SE,S,SW,W,NW,N"
+      data-minor-ticks="22"
+      data-ticks-angle="360"
+      data-start-angle="180"
+      data-stroke-ticks="false"
+      data-highlights="false"
+      data-color-plate="#222"
+      data-color-major-ticks="#f5f5f5"
+      data-color-minor-ticks="#ddd"
+      data-color-numbers="#ccc"
+      data-color-needle="rgba(240, 128, 128, 1)"
+      data-color-needle-end="rgba(255, 160, 122, .9)"
+      data-value-box="false"
+      data-value-text-shadow="false"
+      data-color-circle-inner="#fff"
+      data-color-needle-circle-outer="#ccc"
+      data-needle-circle-size="15"
+      data-needle-circle-outer="false"
+      data-animation-rule="linear"
+      data-needle-type="line"
+      data-needle-start="75"
+      data-needle-end="99"
+      data-needle-width="3"
+      data-borders="true"
+      data-border-inner-width="0"
+      data-border-middle-width="0"
+      data-border-outer-width="10"
+      data-color-border-outer="#ccc"
+      data-color-border-outer-end="#ccc"
+      data-color-needle-shadow-down="#222"
+      data-border-shadow-width="0"
+      data-animation-duration="1500"
+  ></canvas>
+
+</ion-content> 

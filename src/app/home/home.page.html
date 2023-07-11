@@ -6,14 +6,77 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
+      <ion-label id = "datetime" slot ="end"></ion-label>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  
+  <ion-list class ="home">
+    <h1>Device Information</h1>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Software Version:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Hardware Version:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Device Model:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Device Description:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Serial Number:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>CPU Usage:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Memory usage:</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>System up time</ion-label>
+          <ion-label class="desc">mema</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-list>
 </ion-content>

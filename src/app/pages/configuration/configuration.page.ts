@@ -12,4 +12,40 @@ export class ConfigurationPage implements OnInit {
   ngOnInit() {
   }
 
+  actions = [
+    {value:'Block'},
+    {value:'Unblock'}
+  ]
+
+  handlerMessage = '';
+  roleMessage = '';
+
+  public alertButtons = [
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      handler: () => {
+        //cancel on alert
+      },
+    },
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        //yes on alert
+      },
+    },
+  ];
+
+  setResult(ev:any) {
+    
+  }
+
+  isModalOpen = false;
+
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 }
+
