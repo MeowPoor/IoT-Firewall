@@ -13,4 +13,38 @@
       <ion-title size="large">Diagnosis</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-img src="/assets/images/virusss.jpg"></ion-img>
+
+  <ion-grid class="table">
+    <ion-row class="table-row">
+      <ion-col class="columns">Virus Type</ion-col>
+      <ion-col class="columns">IP Address</ion-col>
+      <ion-col class="columns">Action</ion-col>
+    </ion-row>
+    
+    <ion-row class="table-row">
+      <ion-col class="columns">Spyware</ion-col>
+      <ion-col class="columns">152.169.114</ion-col>
+
+      <ion-col class="columns">
+        <ion-select placeholder="None">
+          <ion-select-option *ngFor = "let action of actions" [value] = "action.value">{{action.value}}</ion-select-option>
+        </ion-select>
+      </ion-col>  
+    </ion-row>
+
+    <ion-row class="table-row"> 
+      <ion-col class="columns">Malware</ion-col>
+      <ion-col class="columns">123.456.789</ion-col>
+
+      <ion-col class="columns">
+        <ion-select placeholder="None">
+          <ion-select-option *ngFor = "let action of actions" [value] = "action.value">{{action.value}}</ion-select-option>
+        </ion-select>
+      </ion-col>     
+        
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
