@@ -1,7 +1,19 @@
 ion-button {
     align-items: center;
+    --background: #f2f7a1;
+    color:#181D31;
 }
 
 ion-grid {
+    margin-top: 5%;
     width: 70%;
+    color:#f2f7a1;
+    --background: #181D31;
 }
+
+
+ion-content{
+    --background: url("/assets/images/bg.png") no-repeat center/cover;
+  --max-width: fit-content;   
+  color:#f2f7a1;
+  }

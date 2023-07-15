@@ -22,6 +22,7 @@ export class ConfigurationPage implements OnInit {
 
   public alertButtons = [
     {
+
       text: 'Cancel',
       role: 'cancel',
       handler: () => {
@@ -29,6 +30,7 @@ export class ConfigurationPage implements OnInit {
       },
     },
     {
+      routerLink:'/login-loader',
       text: 'OK',
       role: 'confirm',
       handler: () => {

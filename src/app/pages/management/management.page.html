@@ -53,7 +53,7 @@
     </ion-col>
     <ion-col>
       <ion-item>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" placeholder="Enter SSID Name"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col><ion-label>*(1-32 Characters)</ion-label></ion-col>
@@ -64,7 +64,7 @@
     </ion-col>
     <ion-col>
       <ion-item>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" placeholder="Enter Password"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col><ion-label>*(You can input 8-64 Characters)</ion-label></ion-col>
@@ -75,7 +75,7 @@
     </ion-col>
     <ion-col>
       <ion-item>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" placeholder="Enter New Password"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col>
@@ -90,7 +90,7 @@
     </ion-col>
     <ion-col>
       <ion-item>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" placeholder="Enter SSID Name"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col><ion-label>*(1-32 Characters)</ion-label></ion-col>
@@ -101,7 +101,7 @@
     </ion-col>
     <ion-col>
       <ion-item>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" placeholder="Enter Password"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col><ion-label>*(You can input 8-64 Characters)</ion-label></ion-col>
@@ -112,7 +112,7 @@
     </ion-col>
     <ion-col>
       <ion-item>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" placeholder="Enter New Password"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col>
@@ -120,7 +120,9 @@
     </ion-col>
   </ion-row>
 </ion-grid>
-  <ion-button id ="present-alert">Apply</ion-button>
+<ion-button id ="present-alert" [routerLink]="['/management-loader']">Apply</ion-button>
+</ion-content>
+
   <ion-alert
     trigger="present-alert"
     header="Save Changes"
@@ -130,4 +132,3 @@
   ></ion-alert>
   <p>{{ handlerMessage }}</p>
   <p>{{ roleMessage }}</p>
-</ion-content>

@@ -1,9 +1,26 @@
 ion-grid {
+
     width: 70%;
+    color:#f2f7a1;
+    background-color: #181D31;
 }
 
 #present-alert {
-    margin-left: auto;
+    margin-left: 56%;
     margin-right: auto;
 
 }
+
+.home{
+    --background: #181D31;
+}
+
+ion-col, ion-row{
+    background-color: #181D31;
+}
+
+ion-content{
+    --background: url("/assets/images/bbgg.png") no-repeat center/100%;
+  --max-width: fit-content;   
+  }
+  

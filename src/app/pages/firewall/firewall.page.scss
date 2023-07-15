@@ -5,23 +5,39 @@ p {
     margin-right: 0px;
 }
 
-
-.off{
-    margin-top:3%;
-    width: 1000px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 ion-toggle{
     margin-top:0%;
     width: 120px;
     margin-left:10px;
 }
+
+ion-list{
+    background-color: #181D31;
+    color:#f2f7a1;
+    margin-top:1%;
+    width: 60%;
+    height: 140px;
+    margin-left: 450px;
+
+}
  
-h4{
+h3{
     margin-top:0%;
-    width: 120px;
+    width: 300px;
     margin-left:10px;
 }
+
+ion-content{
+    --background: url("/assets/images/bbg.png") no-repeat center/100%;
+  --max-width: fit-content;   
+  }
+
+  .cache{
+    margin-left: 450px;
+    --background: #f2f7a1;
+    color:#181D31;
+  }
+
+  .one{
+    margin-top:40px;
+  }
