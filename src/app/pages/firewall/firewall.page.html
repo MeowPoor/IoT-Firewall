@@ -9,28 +9,71 @@
 
 <ion-content [fullscreen]="true">
 <ion-list class="one">
-  <h3>Turn off Firewall</h3><br>
-  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <h3>Firewall</h3><br>
+  <ion-toggle [checked]="true" color="primary" [(ngModel)] = "firewall" name="firewall">On/Off</ion-toggle>
   <p>Turning off firewall will stop filtering your networks from potential threats</p>
 </ion-list>
 
 <ion-list class="two">
-  <h3>Turn off Notification </h3><br/>
-  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
-  <p>Turning off notification will not send you any messanges from the app</p>
+  <h3>Notification </h3><br/>
+  <ion-toggle [checked]="true" color="primary" [(ngModel)] = "notification" name ="notification">On/Off</ion-toggle>
+  <p>Turning off notification will not send you any messages from the app</p>
 </ion-list>
 
 <ion-list class="three">
   <h3>Port Scan Protection</h3><br/>
-  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <ion-toggle [checked]="true" color="primary" [(ngModel)] = "portScan" name="portScan">On/Off</ion-toggle>
   <p>Block port scan attempts in the network. Some port scan attempts are performed with the intent of compromising your device</p>
 </ion-list>
 
 <ion-list class="four">
   <h3>Use Passive Detection Mode</h3><br/>
-  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <ion-toggle [checked]="true" color="primary" [(ngModel)] = "passive" name="passive">On/Off</ion-toggle>
   <p>Intercept DHCP traffic wihtout conflicting with existing custom DHCP software</p>
 </ion-list>
 
-<ion-button class="cache" shape="round" [routerLink]="['/clearcache-loader']">clear cache</ion-button>
+<div class="buttons">
+  <ion-button *ngIf = "firewall == true" class="cache" shape="round" >New</ion-button>
+  <ion-button *ngIf = "firewall == true" class="cache" shape="round" style="margin-left:10px">Delete</ion-button>
+  <ion-button  class="cache" shape="round" style="margin-left:10px">clear cache</ion-button>
+</div>
+
+<ion-grid *ngIf = "firewall == true" class="firewall-log">
+  <ion-row class="log-header">
+    <ion-col size="1">
+      ID
+    </ion-col>
+    <ion-col>
+      Log Rule Status
+    </ion-col>
+    <ion-col>
+      Log Access Direction
+    </ion-col>
+    <ion-col>
+      Log Rule Action
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="1">
+      --
+    </ion-col>
+    <ion-col>
+      --
+    </ion-col>
+    <ion-col>
+      --
+    </ion-col>
+    <ion-col>
+      --
+    </ion-col>
+  </ion-row>
+  
+</ion-grid>
+<div class="view-logs" *ngIf = "firewall == true">
+  <h1 style="margin-top:20px;">Download and View Logs</h1>
+  <ion-button id="btnView" shape="round">Download Log File</ion-button>
+  <ion-item style="margin-top:20px; margin-bottom: 40px;">
+    <ion-textarea labelPlacement="floating" [autoGrow]="true"  placeholder="Firewall Logs" >"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum."</ion-textarea>
+  </ion-item>
+</div>
 </ion-content>

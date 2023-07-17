@@ -5,10 +5,14 @@ ion-button {
 }
 
 ion-grid {
-    margin-top: 5%;
+    margin-top: 40px;
     width: 70%;
     color:#f2f7a1;
     --background: #181D31;
+    background-color: #181D31;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #678983;
 }
 
 

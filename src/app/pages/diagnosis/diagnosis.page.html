@@ -11,7 +11,7 @@
   <h1 id="title" style ="margin-top:100px;">Scanning for viruses and malware...</h1>
   <h6 id="title">Don't worry, we'll help you find potential threats</h6>
   <div align="center" id="progress" style="margin-top:40px;">
-    <circle-progress [percent]="39"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+    <circle-progress [percent]="99"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
       [innerStrokeWidth]="10" [titleColor]="'#F2F7A1'" [unitsColor]="'#F2F7A1'" [outerStrokeColor]="'#F2F7A1'" [innerStrokeColor]="'#678983'" [animation]="true"
       [animationDuration]="1000"></circle-progress>
   </div>
@@ -22,35 +22,5 @@
   </div>
   
 
-  <ion-grid class="table">
-    <ion-row class="table-row">
-      <ion-col class="columns">Virus Type</ion-col>
-      <ion-col class="columns">IP Address</ion-col>
-      <ion-col class="columns">Action</ion-col>
-    </ion-row>
-    
-    <ion-row class="table-row">
-      <ion-col class="columns">Spyware</ion-col>
-      <ion-col class="columns">152.169.114</ion-col>
-
-      <ion-col class="columns">
-        <ion-select placeholder="None">
-          <ion-select-option *ngFor = "let action of actions" [value] = "action.value">{{action.value}}</ion-select-option>
-        </ion-select>
-      </ion-col>  
-    </ion-row>
-
-    <ion-row class="table-row"> 
-      <ion-col class="columns">Malware</ion-col>
-      <ion-col class="columns">123.456.789</ion-col>
-
-      <ion-col class="columns">
-        <ion-select placeholder="None">
-          <ion-select-option *ngFor = "let action of actions" [value] = "action.value">{{action.value}}</ion-select-option>
-        </ion-select>
-      </ion-col>     
-        
-    </ion-row>
-
-  </ion-grid>
+  
 </ion-content>

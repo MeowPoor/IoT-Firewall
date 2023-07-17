@@ -12,7 +12,6 @@ export class ReportsPage implements OnInit {
   
 
   ngOnInit() {
-    this.random();
   }
 
 speed = 0;
@@ -66,6 +65,10 @@ random(){
     
 }
 
+test(){
+    this.random();
+}
+
 falter(){
     setTimeout(() => {
         this.increaseSpeed();
@@ -115,7 +118,9 @@ changeActive() {
 
 changeText() {
     let el = document.getElementsByClassName("km")[0] as HTMLInputElement;
+    let el2 = document.getElementsByClassName("km")[1] as HTMLInputElement;
     el.innerText = this.speed.toString();
+    el2.innerText = this.speed.toString() + " MBPS";
 }
 
 
