@@ -6,6 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { defineCustomElements } from 'simple-circular-progress';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,4 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule {
+  
+}

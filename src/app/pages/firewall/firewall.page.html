@@ -8,18 +8,29 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Firewall</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-list class="off">
-  <h4>Turn off Firewall</h4>
-  <ion-toggle [checked]="true" color="danger">Patayin</ion-toggle><br /><br />
-  <p>papatayin ka sa selos hehehe</p>
-  <br />
-  <h4>Going Report</h4>
-  <ion-toggle [checked]="true" color="danger">Patayin</ion-toggle><br /><br />
+<ion-list class="one">
+  <h3>Turn off Firewall</h3><br>
+  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <p>Turning off firewall will stop filtering your networks from potential threats</p>
 </ion-list>
+
+<ion-list class="two">
+  <h3>Turn off Notification </h3><br/>
+  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <p>Turning off notification will not send you any messanges from the app</p>
+</ion-list>
+
+<ion-list class="three">
+  <h3>Port Scan Protection</h3><br/>
+  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <p>Block port scan attempts in the network. Some port scan attempts are performed with the intent of compromising your device</p>
+</ion-list>
+
+<ion-list class="four">
+  <h3>Use Passive Detection Mode</h3><br/>
+  <ion-toggle [checked]="true" color="primary">On/Off</ion-toggle>
+  <p>Intercept DHCP traffic wihtout conflicting with existing custom DHCP software</p>
+</ion-list>
+
+<ion-button class="cache" shape="round" [routerLink]="['/clearcache-loader']">clear cache</ion-button>
 </ion-content>

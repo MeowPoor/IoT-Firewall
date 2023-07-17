@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+ion-content{
+    --background: url("/assets/images/bbgg.png") no-repeat center/100%;
+  --max-width: fit-content;   
+  }
+
+
+
 .speedometer-container {
     width: 300px;
     height: 300px;
-    border: 3px solid black;
+    border: 3px solid #f2f7a1;
     border-radius: 50%;
     margin: 50px auto;
     position: relative;
@@ -16,7 +23,7 @@
 .center-point {
     width: 20px;
     height: 20px;
-    background-color: black;
+    background-color: #f2f7a1;
     border-radius: 50%;
     position: absolute;
     top: 137px;
@@ -27,7 +34,7 @@
 .speedometer-scale {
     width: 8px;
     height: 280px;
-    background-color: black;
+    background-color: #f2f7a1;
     position: absolute;
     left: 143px;
     top: 7px;    
@@ -155,7 +162,7 @@
 .speedometer-center-hide {
     width: 250px;
     height: 250px;
-    background-color: white;
+    background-color: #181D31;
     border-radius: 50%;
     position: absolute;
     top: 22px;
@@ -166,7 +173,7 @@
 .speedometer-bottom-hide {
     width: 320px;
     height: 250px;
-    background-color: white;
+    background-color: #181D31;
     position: absolute;
     z-index: 11;
     top: 160px;

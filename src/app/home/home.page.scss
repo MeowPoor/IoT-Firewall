@@ -8,6 +8,11 @@
   transform: translateY(-50%);
 }
 
+ion-item{
+  --background:transparent;
+  color:#f2f7a1;
+}
+
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -32,7 +37,31 @@
 }
 
 .home{
+  margin-top: 1%;
   width:50%;
   margin-left:auto;
   margin-right: auto;
+  background-color: transparent;
+  color:#f2f7a1;
 }
+
+.connect{
+  width:300px;
+  margin-top:40px;
+}
+
+ion-img{
+  margin-bottom: 1%;
+  margin-left: 25%;
+  margin-top: 1%;
+  height: 10%;
+  width: 50%;
+  
+}
+
+
+ion-content{
+  --background: url("/assets/images/bg.png") no-repeat center/100%;
+--max-width: fit-content;   
+}
+

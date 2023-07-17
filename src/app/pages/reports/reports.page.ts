@@ -12,52 +12,112 @@ export class ReportsPage implements OnInit {
   
 
   ngOnInit() {
+    this.random();
   }
 
+speed = 0;
+prevSpeed = 0;
+currentScale = 1;
+
+random(){
+    setTimeout(() => {
+        this.increaseSpeed();
+        setTimeout(() => {
+        this.increaseSpeed();
+        setTimeout(() => {
+            this.increaseSpeed();
+            setTimeout(() => {
+                this.increaseSpeed();
+                setTimeout(() => {
+                    this.increaseSpeed();
+                    setTimeout(() => {
+                        this.increaseSpeed();
+                        setTimeout(() => {
+                            this.increaseSpeed();
+                            setTimeout(() => {
+                                this.increaseSpeed();
+                                setTimeout(() => {
+                                    this.decreaseSpeed();
+                                    setTimeout(() => {
+                                        this.decreaseSpeed();
+                                        setTimeout(() => {
+                                            this.decreaseSpeed();
+                                            setTimeout(() => {
+                                                this.increaseSpeed();
+                                                setTimeout(() => {
+                                                    this.decreaseSpeed();
+                                                   }, 1000);
+                                               }, 500);
+                                           }, 1000);
+                                       }, 1000);
+                                   }, 1000);
+                               }, 500);
+                           }, 500);
+                       }, 500);
+                   }, 500);
+               }, 500);
+           }, 500);
+       }, 500);
+       }, 1000);
+
+    
+    setInterval(this.random, 1);
+
+    
 }
 
-var speed = 0;
-var prevSpeed = 0;
-var currentScale = 1;
+falter(){
+    setTimeout(() => {
+        this.increaseSpeed();
+       }, 1000);
+       setTimeout(() => {
+        this.decreaseSpeed();
+       }, 1000);
 
-function increaseSpeed() {
-    if (speed < 180) {
-        speed = speed + 10;
-        addClass();
-        currentScale = currentScale + 1;
-        changeActive();
-        changeText();
+}
+
+increaseSpeed() {
+    if (this.speed < 180) {
+        this.speed = this.speed + 10;
+        this.addClass();
+        this.currentScale = this.currentScale + 1;
+        this.changeActive();
+        this.changeText();
     }
 }
 
-function decreaseSpeed() {
-    if (speed > 0) {
-        speed = speed - 10;
-        addClass();
-        changeActive();
-        currentScale = currentScale - 1;
-        changeText();
+decreaseSpeed() {
+    if (this.speed > 0) {
+        this.speed = this.speed - 10;
+        this.addClass();
+        this.changeActive();
+        this.currentScale = this.currentScale - 1;
+        this.changeText();
     }
 }
 
-function addClass() {
-    let newClass = "speed-" + speed;
-    let prevClass = "speed-" + prevSpeed;
+addClass() {
+    let newClass = "speed-" + this.speed;
+    let prevClass = "speed-" + this.prevSpeed;
     let el = document.getElementsByClassName("arrow-wrapper")[0];
     if (el.classList.contains(prevClass)) {
         el.classList.remove(prevClass);
         el.classList.add(newClass);
     }
-    prevSpeed = speed;
+    this.prevSpeed = this.speed;
 }
 
-function changeActive() {
-    let tempClass = "speedometer-scale-" + currentScale;
+changeActive() {
+    let tempClass = "speedometer-scale-" + this.currentScale;
     let el = document.getElementsByClassName(tempClass)[0];
     el.classList.toggle("active");
 }
 
-function changeText() {
+changeText() {
     let el = document.getElementsByClassName("km")[0] as HTMLInputElement;
-    el.innerText = speed.toString();
+    el.innerText = this.speed.toString();
 }
+
+
+}
+

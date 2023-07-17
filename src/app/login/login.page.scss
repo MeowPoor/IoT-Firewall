@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
+#contain{
+    --background:#181D31;
+    color:#F2F7A1;
+    width:40%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:30vh;
+}
+
+ion-item{
+    --background:#181D31;
+}
 
 .title {
     text-align: center;
@@ -7,6 +19,7 @@
     font-family: "Poppins";
     margin-left: auto;
     margin-right: auto; 
+    color:#F2F7A1;
 }
 
 .loginForm{
@@ -14,7 +27,9 @@
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-
+    color:#F2F7A1;
+    text-align: center;
+    --background:#181D31;
 }
 
 ion-button{
@@ -22,9 +37,25 @@ ion-button{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    --background: #f2f7a1;
+    color:#181D31;
 }
 
 //code for phones
 @media (max-width: 576px), (max-width:800px) {
 
 }
+
+ion-content{
+    --background: url("/assets/images/cbg.png") no-repeat center/100%;
+    --max-width: fit-content;   
+  }
+
+  ion-input{
+    color:#f2f7a1;
+  }
+
+  ion-icon{
+    color:#f2f7a1;
+  }
+  

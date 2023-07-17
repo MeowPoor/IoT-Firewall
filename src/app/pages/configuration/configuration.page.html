@@ -54,93 +54,95 @@
   <p>{{ handlerMessage }}</p>
   <p>{{ roleMessage }}</p>
 
-  <ion-modal [isOpen]="isModalOpen">
-    <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>All Information</ion-title>
-          <ion-buttons slot="end">
-            <ion-button style="color: rgb(10, 207, 207);"(click)="setOpen(false)">Close</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-        <ion-list class ="home">
-          <h1>Device Information</h1>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Host Name: </ion-label>
-                <ion-label class="desc">Nitro AN515-55</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Device Name: </ion-label>
-                <ion-label class="desc">Toshinori</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Device Model: </ion-label>
-                <ion-label class="desc">Laptop</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>MAC Address: </ion-label>
-                <ion-label class="desc">a8:7e:ea:90:37:ec</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Device Status: </ion-label>
-                <ion-label class="desc">Online</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Port Type: </ion-label>
-                <ion-label class="desc">WIFI</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Port Type: </ion-label>
-                <ion-label class="desc">SSID1</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>Online Duration</ion-label>
-                <ion-label class="desc">18 hours 37 minutes</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label>IP Acquisition Mode</ion-label>
-                <ion-label class="desc">DHCP</ion-label>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </ion-list>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
+  
 </ion-content>
+
+<ion-modal id="info" [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>All Information</ion-title>
+        <ion-buttons slot="end">
+          <ion-button style="color: rgb(10, 207, 207);"(click)="setOpen(false)">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list class ="home">
+        <h1>Device Information</h1>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Host Name: </ion-label>
+              <ion-label class="desc">Nitro AN515-55</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Device Name: </ion-label>
+              <ion-label class="desc">Toshinori</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Device Model: </ion-label>
+              <ion-label class="desc">Laptop</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>MAC Address: </ion-label>
+              <ion-label class="desc">a8:7e:ea:90:37:ec</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Device Status: </ion-label>
+              <ion-label class="desc">Online</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Port Type: </ion-label>
+              <ion-label class="desc">WIFI</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Port Type: </ion-label>
+              <ion-label class="desc">SSID1</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Online Duration</ion-label>
+              <ion-label class="desc">18 hours 37 minutes</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>IP Acquisition Mode</ion-label>
+              <ion-label class="desc">DHCP</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
