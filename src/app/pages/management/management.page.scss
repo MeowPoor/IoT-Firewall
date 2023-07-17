@@ -23,4 +23,13 @@ ion-content{
     --background: url("/assets/images/bbgg.png") no-repeat center/100%;
   --max-width: fit-content;   
   }
+
+  ion-button{
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    --background: #f2f7a1;
+    color:#181D31;
+}
   

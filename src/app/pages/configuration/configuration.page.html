@@ -15,31 +15,18 @@
             <ion-col class="columns">View Device Details</ion-col>
           </ion-row>
           
-          <ion-row class="table-row">
-            <ion-col class="columns">Toshinori</ion-col>
-            <ion-col class="columns">a8:7e:ea:90:37:ec</ion-col>
-
+          <ion-row class="table-row" *ngFor ="let device of devices" >
+            <ion-col class="columns">{{device.deviceName}}</ion-col>
+            <ion-col class="columns">{{device.macAddress}}</ion-col>
             <ion-col class="columns">
               <ion-select placeholder="None">
                 <ion-select-option *ngFor = "let action of actions" [value] = "action.value">{{action.value}}</ion-select-option>
               </ion-select>
             </ion-col>
-            <ion-col><ion-button (click)="setOpen(true)">View Information</ion-button></ion-col>   
+            <ion-col><ion-button (click)="setOpen(true, device)">View Information</ion-button></ion-col>   
           </ion-row>
       
-          <ion-row class="table-row"> 
-            <ion-col class="columns">M2010J19CG-KIMI</ion-col>
-            <ion-col class="columns">64:a2:00:9d:a8:0a</ion-col>
-
-            <ion-col class="columns">
-              <ion-select placeholder="None">
-                <ion-select-option *ngFor = "let action of actions" [value] = "action.value">{{action.value}}</ion-select-option>
-              </ion-select>
-            </ion-col>     
-            <ion-col>
-            <ion-button (click)="setOpen(true)">View Information</ion-button>
-            </ion-col>   
-          </ion-row>
+          
           <ion-button id ="present-alert">Save</ion-button>
         </ion-grid>      
 
@@ -63,7 +50,7 @@
       <ion-toolbar>
         <ion-title>All Information</ion-title>
         <ion-buttons slot="end">
-          <ion-button style="color: rgb(10, 207, 207);"(click)="setOpen(false)">Close</ion-button>
+          <ion-button style="color: rgb(10, 207, 207);"(click)="setOpen(false, device)">Close</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
@@ -74,7 +61,7 @@
           <ion-col>
             <ion-item>
               <ion-label>Host Name: </ion-label>
-              <ion-label class="desc">Nitro AN515-55</ion-label>
+              <ion-label class="desc">{{device.hostName}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -82,7 +69,7 @@
           <ion-col>
             <ion-item>
               <ion-label>Device Name: </ion-label>
-              <ion-label class="desc">Toshinori</ion-label>
+              <ion-label class="desc">{{device.deviceName}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -90,7 +77,7 @@
           <ion-col>
             <ion-item>
               <ion-label>Device Model: </ion-label>
-              <ion-label class="desc">Laptop</ion-label>
+              <ion-label class="desc">{{device.deviceModel}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -98,7 +85,7 @@
           <ion-col>
             <ion-item>
               <ion-label>MAC Address: </ion-label>
-              <ion-label class="desc">a8:7e:ea:90:37:ec</ion-label>
+              <ion-label class="desc">{{device.macAddress}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -106,7 +93,7 @@
           <ion-col>
             <ion-item>
               <ion-label>Device Status: </ion-label>
-              <ion-label class="desc">Online</ion-label>
+              <ion-label class="desc">{{device.deviceStatus}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -114,14 +101,14 @@
           <ion-col>
             <ion-item>
               <ion-label>Port Type: </ion-label>
-              <ion-label class="desc">WIFI</ion-label>
+              <ion-label class="desc">{{device.portType}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-item>
-              <ion-label>Port Type: </ion-label>
+              <ion-label>Port ID: </ion-label>
               <ion-label class="desc">SSID1</ion-label>
             </ion-item>
           </ion-col>
@@ -130,7 +117,7 @@
           <ion-col>
             <ion-item>
               <ion-label>Online Duration</ion-label>
-              <ion-label class="desc">18 hours 37 minutes</ion-label>
+              <ion-label class="desc">{{device.onlineDuration}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -138,7 +125,7 @@
           <ion-col>
             <ion-item>
               <ion-label>IP Acquisition Mode</ion-label>
-              <ion-label class="desc">DHCP</ion-label>
+              <ion-label class="desc">{{device.ipMode}}</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>

@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirewallPage implements OnInit {
 
+  firewall:any;
+  portScan:any;
+  notification:any;
+  passive:any;
+
   constructor() { }
 
   ngOnInit() {

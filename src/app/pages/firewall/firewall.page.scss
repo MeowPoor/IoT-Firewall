@@ -1,3 +1,30 @@
+#btnView{
+  --background: #f2f7a1;
+  color:#181D31;
+}
+
+.view-logs{
+  margin-top:40px;
+  width:1000px;
+  margin-left:450px;
+  color:#f2f7a1;
+}
+
+.firewall-log{
+  margin-top:40px;
+  width:1000px;
+  margin-left:450px;
+  color:#f2f7a1;
+}
+
+.log-header{
+  background-color: #678983;
+}
+
+.id-col{
+  width:30px;
+}
+
 p {
     text-align: auto;
     text-size-adjust: 50vh;
@@ -33,11 +60,15 @@ ion-content{
   }
 
   .cache{
-    margin-left: 450px;
+
     --background: #f2f7a1;
     color:#181D31;
   }
 
+  .buttons{
+    margin-left:450px;
+  }
+
   .one{
-    margin-top:40px;
+    margin-top:30px;
   }
