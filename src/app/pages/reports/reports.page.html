@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" style="padding-top:60px;">
   <div class="speedometer-container">
     <div class="speedometer-text">
         <div class="static" style="color:#f2f7a1">Speed</div>
@@ -45,6 +45,32 @@
     <div class="speedometer-scale speedometer-scale-18"></div>
     <div class="speedometer-scale speedometer-scale-19"></div>
   </div>
+
+  <div id ="test-container" align="center">
+    <ion-button shape="round" (click) = "test()" id="test-button">Test</ion-button>
+  </div>
+  
+
+  <ion-grid id="ud-dl">
+    <ion-row>
+      <ion-col style = "border-right-style: solid; border-right-width: 1px;">
+          <h1 class = "km">0 MBPS</h1>
+      </ion-col>
+      <ion-col>
+          <h1 class = "km">0 MBPS</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          Download
+      </ion-col>
+      <ion-col>
+          Upload
+      </ion-col>
+    </ion-row>
+    
+
+  </ion-grid>
   
 </ion-content> 
 

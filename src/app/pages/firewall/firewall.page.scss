@@ -1,12 +1,33 @@
+#btnView{
+  --background: #f2f7a1;
+  color:#181D31;
+}
+
+.view-logs{
+  margin-top:40px;
+  width:1000px;
+  margin-left:450px;
+  color:#f2f7a1;
+  margin-bottom:50px;
+}
+
+.firewall-log{
+  margin-top:40px;
+  width:1000px;
+  margin-left:450px;
+  color:#f2f7a1;
+}
+
+.log-header{
+  background-color: #678983;
+}
+
 p {
-    text-align: auto;
-    text-size-adjust: 50vh;
+    font-size: 20px;
     margin-left: 10px;
-    margin-right: 0px;
 }
 
 ion-toggle{
-    margin-top:0%;
     width: 120px;
     margin-left:10px;
 }
@@ -14,30 +35,84 @@ ion-toggle{
 ion-list{
     background-color: #181D31;
     color:#f2f7a1;
-    margin-top:1%;
     width: 60%;
-    height: 140px;
     margin-left: 450px;
 
 }
  
 h3{
-    margin-top:0%;
     width: 300px;
     margin-left:10px;
 }
 
 ion-content{
-    --background: url("/assets/images/bbg.png") no-repeat center/100%;
-  --max-width: fit-content;   
+    --background: url("/assets/images/bbg.png") no-repeat center/100%;   
   }
 
   .cache{
-    margin-left: 450px;
+
     --background: #f2f7a1;
     color:#181D31;
   }
 
-  .one{
-    margin-top:40px;
+  .buttons{
+    margin-left:450px;
   }
+
+  .one{
+    margin-top:30px;
+  }
+
+  ion-textarea{
+    --background:white;
+    background-color: white;
+    color: #181D31;
+    padding: 10px;
+  }
+
+  //code for phones
+@media (max-width:576px), (max-width:800px) {
+
+  ion-content{
+    --background: url("/assets/images/bbg.png") no-repeat center/200% 100%;
+  }
+
+  ion-list{
+    margin-left: 40px;
+    font-size: small;
+    width: 80%;
+  }
+
+
+  .buttons{
+    margin-left: 60px;
+  }
+
+  .firewall-log{
+    margin-left: 20px;
+    width: 370px;
+  }
+
+  .view-logs{
+    margin-left: 20px;
+    width:80%;
+  }
+
+  ion-textarea{
+    width: 340px;
+    margin-bottom: 250px;
+  }
+  
+  h3{
+    font-size: 20px;
+  }
+
+  ion-toggle::part(track) {
+    height: 20px;
+    width: 45px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+}

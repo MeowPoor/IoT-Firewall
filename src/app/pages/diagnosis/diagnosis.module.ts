@@ -21,7 +21,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       "outerStrokeWidth": 10,
       "innerStrokeWidth": 5,
       "showBackground": false,
-      "startFromZero": false}),
+      "startFromZero": false
+  
+    }),
   ],
   declarations: [DiagnosisPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

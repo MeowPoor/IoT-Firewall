@@ -1,3 +1,33 @@
+#test-button{
+    --background: #f2f7a1;
+    color:#181D31;
+}
+
+#test-container{
+    position: absolute;
+    width: 400px;
+    left: 0;
+    right: 0;
+    margin: -100px auto 0 auto;
+    z-index:100;
+}
+
+ion-grid{
+    width:500px;
+    text-align: center;
+    --background: #181D31;
+    background-color: #181D31;
+    color:#f2f7a1;
+    position:absolute;
+    z-index:200;
+    left:525px;
+    right:0;
+}
+
+ion-col{
+    text-align: center;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +46,7 @@ ion-content{
     height: 300px;
     border: 3px solid #f2f7a1;
     border-radius: 50%;
-    margin: 50px auto;
+    margin: 100px auto;
     position: relative;
 }
 
@@ -321,4 +351,35 @@ ion-content{
 .unit {
     font-size: 14px;
     margin-left: 5px;
+}
+
+
+ //code for phones
+ @media (max-width: 576px), (max-width:800px) {
+
+    ion-content{
+        --background: url("/assets/images/bbgg.png") no-repeat center/200% 100%;
+      --max-width: fit-content;   
+      }
+
+    .unit {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    
+    ion-grid{
+        width:100px;
+        text-align: center;
+        z-index:200;
+        left:60px;
+        right:0;
+    }
+
+    #ud-dl{
+        width: 250px;
+      
+ }
+    .km{
+        font-size: medium;
+    }
 }

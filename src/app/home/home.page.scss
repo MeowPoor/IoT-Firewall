@@ -61,7 +61,45 @@ ion-img{
 
 
 ion-content{
-  --background: url("/assets/images/bg.png") no-repeat center/100%;
+  --background: url("/assets/images/bg.png") no-repeat center/125%;
 --max-width: fit-content;   
 }
 
+//code for phones
+@media (max-width:576px), (max-width:800px) {
+ 
+  ion-content{
+    --background: url("/assets/images/bg.png") no-repeat center/200% 200%;
+    --max-width: fit-content;   
+  }
+
+  ion-item{
+    --background:#181D31;
+  }
+
+  .home{
+    width:100%;
+    font-size: small;
+    margin-bottom: 20px;
+    margin-left:0;
+  }
+
+
+  h1{
+    text-align: center;
+    font-size: 25px;
+  }
+
+ion-title{
+  display:none;
+}
+
+.desc{
+  font-size: 10px;
+}
+
+.lab{
+  font-size: 10px;
+}
+
+}

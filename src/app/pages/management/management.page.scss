@@ -23,4 +23,52 @@ ion-content{
     --background: url("/assets/images/bbgg.png") no-repeat center/100%;
   --max-width: fit-content;   
   }
+
+  ion-button{
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    --background: #f2f7a1;
+    color:#181D31;
+}
+
+//code for phones
+@media (max-width:576px), (max-width:896px) {
+
+    ion-content{
+        --background: url("/assets/images/bbgg.png") no-repeat center/200% 100%;
+       
+      }
+
+      .home{
+        width: 300px;
+    }
+
+    #present-alert{
+        margin-left: 20px;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-size: 25px;
+        margin-left: 0px;
+    }
+
+    ion-label{
+        font-size: 13px;
+    }
+
+    ion-item{
+        width: 125px;
+    }
+
+    ion-grid{
+        margin-left: 5px;
+        width: 100px;
+        margin-bottom: 250px;
+    }
+}
+
   

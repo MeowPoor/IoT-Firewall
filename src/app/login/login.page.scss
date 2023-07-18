@@ -41,10 +41,6 @@ ion-button{
     color:#181D31;
 }
 
-//code for phones
-@media (min-width: 481px), (max-width:768px) {
-   
-}
 
 ion-content{
     --background: url("/assets/images/cbg.png") no-repeat center/100%;
@@ -58,4 +54,35 @@ ion-content{
   ion-icon{
     color:#f2f7a1;
   }
-  
+
+
+//code for phones
+@media (max-width: 576px), (max-width:800px) {
+
+
+  .title {
+    text-align: center;
+    font-size: 5vh;
+}
+
+ion-content{
+    --background: url("/assets/images/cbg.png") no-repeat center/200% 100%;
+    --max-width: fit-content;   
+  }
+
+  #contain{
+    --background:#181D31;
+    color:#F2F7A1;
+    width: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:30vh;
+}
+
+
+
+
+
+
+
+}
